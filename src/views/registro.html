@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="/js/services.js"></script>
+  <title>Reporte</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__img" src="/img.svg" alt="IAS">
+  </header>
+
+  <section class="register">
+    <section class="main">
+      <h2 class="main__title">Consultar tecnico</h2>
+      <input type="text" class="input" id="id-tecnico" placeholder="Id tecnico" required>
+      <input type="text" class="input" id="num-week" placeholder="Semana #..." required>
+      <button class="button button-search" onclick="search(this)">Buscar</button>
+    </section>
+    <section class="register__container">
+      <h2>Reporte</h2>
+      <table class="table table-bordered table__container">
+        <thead>
+          <tr>
+            <th scope="col">Horas normales</th>
+            <th scope="col">Horas nocturnas</th>
+            <th scope="col">Horas dominicales</th>
+            <th scope="col">Horas extras normales</th>
+            <th scope="col">Horas extras nocturnas</th>
+            <th scope="col">Horas extras dominicales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="hours" scope="row"  id="normal-hours"></th>
+            <td class="hours" scope="row" id="sunday-hours"></td>
+            <td class="hours" scope="row" id="normal-extra-hours"></td>
+            <td class="hours" scope="row" id="night-extra-hours"></td>
+            <td class="hours" scope="row" id="sunday-extra-hours"></td>
+            <td class="hours" scope="row" id="night-hours"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+  <footer class="footer">
+    <a href="/">Terminos de uso</a>
+    <a href="/">Declaración de privacidad</a>
+    <a href="/">Centro de ayuda</a>
+  </footer>
+</body>
+
+</html>
